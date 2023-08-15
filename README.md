@@ -11,7 +11,12 @@ The project runs on localhost:3000
 To run the project you can either use "npm run dev" to run the project in development, or you can use "npm run build" and then use "npm run start".  
 Postman was used to test the API. Import the "postman_collection" and "postman_environment" files inside your Postman app to set up Postman (Import button at top left of Postman).  
 After importing both .json files go to the "environments" tab inside the Postman app and set the "pafin_variables" active by clicking the checkmark right from its name.  
-With this you won't have to manually copy the user id (uuid) or the JWT to access the routes. Call the "Create User" route (or "Create 2nd User") and the variables will be automatically stored.
+With this you won't have to manually copy the user id (uuid) or the JWT to access the routes. Send the "Create User" request (or "Create 2nd User") inside of pafin_assignment > Success. The variables will be automatically stored inside the imported environment (don't forget to set the environment active).  
+The requests inside the Errors directory are all supposed to fail.  
+The requests inside the Success directory are all supposed to succeed.  
+The Utils directory is for making the testing simpler.  
+  
+If you don't want to use the environment variables in Postman you will have to manually store the id and JWT which are returned by calling a POST request on the /users route for future requests.  
 
 ## API Documentation
 All routes start with /api  
