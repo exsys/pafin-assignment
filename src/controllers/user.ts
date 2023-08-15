@@ -51,7 +51,7 @@ export class UserController {
 
         try {
             await postgresDataSource.getRepository(User).update(uuid, updatedUser);
-            return ResponseWrapper.success({ message: "User updated successfully" });
+            return ResponseWrapper.ok();
         } catch (error) {
             return ResponseWrapper.error("Server error");
         }

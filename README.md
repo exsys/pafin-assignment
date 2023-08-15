@@ -30,15 +30,17 @@ user: {
 }
 ```  
 Authorization: None  
+Returns the user id (UUID) and a JWT for future authorization.  
 
 ### /users/:id
 Param:  
-:id => represents the uuid of a user  
+:id => represents the UUID of a user  
 
 **GET** /  
 Get a user for the given user id  
 Body: None  
 Authorization: JWT  
+Returns basic information about the user.  
 
 **PUT** /  
 Update a user for the given user id  
@@ -51,8 +53,10 @@ user: {
 }
 ```  
 Authorization: JWT  
+Returns status code 204 without a body
 
 **DELETE** /  
 Deletes a user with a given user id  
 Body: None  
 Authorization: JWT  
+Returns status code 204 without a body
