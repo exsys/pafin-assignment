@@ -1,0 +1,36 @@
+{
+  "name": "pafin-assignment",
+  "version": "1.0.0",
+  "description": "A technical assignment. Do not use it in production as it was only created for testing purposes.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "npx nodemon ./src/index.ts",
+    "start": "node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "Justin Meschankin",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.1",
+    "pg": "^8.11.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.5.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
