@@ -12,6 +12,12 @@ interface UserObject {
     password: string,
 }
 
+interface UpdateObject {
+    name?: string,
+    email?: string,
+    password?: string,
+}
+
 export class UserController {
     static async getUser(uuid: string): Promise<ResponseObject> {
         const result = await postgresDataSource.getRepository(User).findOne({
@@ -41,7 +47,7 @@ export class UserController {
         }
     }
 
-    static async updateUser(uuid: string, updatedUser: any): Promise<ResponseObject> {
+    static async updateUser(uuid: string, updatedUser: UpdateObject): Promise<ResponseObject> {
         try {
             const user = await this.checkIfUserExists(uuid);
             if (!user) return ResponseWrapper.error("Couldn't find user with given id", 404);
